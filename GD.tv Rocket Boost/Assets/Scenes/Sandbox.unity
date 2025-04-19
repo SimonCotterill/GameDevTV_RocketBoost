@@ -315,7 +315,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0.031769443, y: 0.047054697, z: -0.0014993965, w: -0.9983859}
-  m_LocalPosition: {x: -19.267529, y: 2.7178335, z: -9.956155}
+  m_LocalPosition: {x: -19.267653, y: 2.717834, z: -9.956166}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -774,7 +774,7 @@ Rigidbody:
   m_GameObject: {fileID: 1367404549}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -790,7 +790,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 56
   m_CollisionDetection: 0
 --- !u!1001 &1533637553
 PrefabInstance:
@@ -919,7 +919,7 @@ Transform:
   m_GameObject: {fileID: 1918750494}
   serializedVersion: 2
   m_LocalRotation: {x: -0.031769443, y: 0.047054697, z: -0.0014993965, w: -0.9983859}
-  m_LocalPosition: {x: -19.267529, y: 2.7178335, z: -9.956155}
+  m_LocalPosition: {x: -19.267653, y: 2.717834, z: -9.956166}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1013,6 +1013,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ed2e2e7679dc24c8166ea4266f6b8e, type: 3}
+--- !u!1001 &7985582762297724181
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5028670237209613753, guid: 2c73f598564cdeb4291c8021927d559a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028670237209613753, guid: 2c73f598564cdeb4291c8021927d559a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028670237209613753, guid: 2c73f598564cdeb4291c8021927d559a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028670237209613753, guid: 2c73f598564cdeb4291c8021927d559a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028670237209613753, guid: 2c73f598564cdeb4291c8021927d559a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028670237209613753, guid: 2c73f598564cdeb4291c8021927d559a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028670237209613753, guid: 2c73f598564cdeb4291c8021927d559a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028670237209613753, guid: 2c73f598564cdeb4291c8021927d559a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028670237209613753, guid: 2c73f598564cdeb4291c8021927d559a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028670237209613753, guid: 2c73f598564cdeb4291c8021927d559a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5657291187800051459, guid: 2c73f598564cdeb4291c8021927d559a, type: 3}
+      propertyPath: m_Name
+      value: Dropship_01_Tank_Red
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2c73f598564cdeb4291c8021927d559a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1025,3 +1082,4 @@ SceneRoots:
   - {fileID: 2839069254868804804}
   - {fileID: 1533637553}
   - {fileID: 1367404551}
+  - {fileID: 7985582762297724181}
