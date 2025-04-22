@@ -6,12 +6,9 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
 
-
-
-    private void OnCollisionEnter(Collision other)
+     private void OnCollisionEnter(Collision other)
     {
-        //(other.gameObject.tag)
-
+    
         switch (other.gameObject.tag)
         {
             case "Friendly":
@@ -22,6 +19,7 @@ public class CollisionHandler : MonoBehaviour
                 break;
             case "Finish":
                 UnityEngine.Debug.Log("hit finish");
+                LoadNextLevel();
                 break;
             default:
                 UnityEngine.Debug.Log("ooch ouch hit something bad");
@@ -33,7 +31,20 @@ public class CollisionHandler : MonoBehaviour
 
     private void ReloadLevel()
     {
-        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        int currentScene = currentScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentScene);
+    }
+
+    private void LoadNextLevel()
+    {
+        int currentScene = currentScene = SceneManager.GetActiveScene().buildIndex;
+        currentScene++;
+        
+        if (currentScene == SceneManager.sceneCountInBuildSettings)
+        {
+            currentScene = 0;
+        }
+
         SceneManager.LoadScene(currentScene);
     }
 }
