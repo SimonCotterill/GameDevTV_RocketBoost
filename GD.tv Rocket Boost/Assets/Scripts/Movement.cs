@@ -9,6 +9,8 @@ public class Movement : MonoBehaviour
     [SerializeField] float thrustStrength = 40f;
     [SerializeField] float rotationStrength = 40f;
 
+    [SerializeField] AudioClip mainEngineAudio;
+
     AudioSource audioSource;
     Rigidbody rb;
 
@@ -32,7 +34,7 @@ public class Movement : MonoBehaviour
             //UnityEngine.Debug.Log("pressing space");
             if (!audioSource.isPlaying)
             {
-                audioSource.Play();
+                audioSource.PlayOneShot(mainEngineAudio);
             }
         }
         else
