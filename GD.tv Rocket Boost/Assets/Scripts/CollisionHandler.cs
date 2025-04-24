@@ -14,6 +14,8 @@ public class CollisionHandler : MonoBehaviour
 
     AudioSource audioSource;
 
+    bool isControllable = true;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -21,7 +23,15 @@ public class CollisionHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        //If the rocket is not controllable (crashed, level finished, etc.)
+        //then don't finish this method
+            //prevents unnecesary sounds
+        if (!isControllable)
+        {
+            return;
+        }
     
+
         switch (other.gameObject.tag)
         {
             case "Friendly":
@@ -33,16 +43,19 @@ public class CollisionHandler : MonoBehaviour
             case "Finish":
                 UnityEngine.Debug.Log("hit finish");
                 StartFinishSequence();
+                isControllable = false;
                 break;
             default:
                 UnityEngine.Debug.Log("ooch ouch hit something bad");
                 StartCrashSequence();
+                isControllable = false;
                 break;
         }
     }
 
     private void StartCrashSequence()
     {
+        audioSource.Stop();
         audioSource.PlayOneShot(crashAudio);
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", crashDelay);
@@ -50,6 +63,7 @@ public class CollisionHandler : MonoBehaviour
 
     private void StartFinishSequence()
     {
+        audioSource.Stop();
         audioSource.PlayOneShot(finishAudio);
         GetComponent<Movement>().enabled = false;
         Invoke("LoadNextLevel", finishDelay);
