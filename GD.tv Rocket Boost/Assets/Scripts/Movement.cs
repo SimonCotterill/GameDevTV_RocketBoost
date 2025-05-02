@@ -9,6 +9,10 @@ public class Movement : MonoBehaviour
     [SerializeField] float thrustStrength = 40f;
     [SerializeField] float rotationStrength = 40f;
 
+    [SerializeField] ParticleSystem leftThrustParticles;
+    [SerializeField] ParticleSystem rightThrustParticles;
+    [SerializeField] ParticleSystem mainThrustParticles;
+
     [SerializeField] AudioClip mainEngineAudio;
 
     AudioSource audioSource;
@@ -34,12 +38,17 @@ public class Movement : MonoBehaviour
             //UnityEngine.Debug.Log("pressing space");
             if (!audioSource.isPlaying)
             {
-                audioSource.PlayOneShot(mainEngineAudio);
+                audioSource.PlayOneShot(mainEngineAudio);        
             }
+            if (!mainThrustParticles.isPlaying)
+            {
+                mainThrustParticles.Play();
+            }          
         }
         else
         {
             audioSource.Stop();
+            mainThrustParticles.Stop();
         }
     }
 
@@ -68,10 +77,25 @@ public class Movement : MonoBehaviour
         if (rotationInput == 1)
         {
             RotationAction(1);
+            if (!rightThrustParticles.isPlaying)
+            {
+                leftThrustParticles.Stop();
+                rightThrustParticles.Play();
+            }
         }
         else if (rotationInput == -1)
         {
             RotationAction(-1);
+            if (!leftThrustParticles.isPlaying)
+            {
+                rightThrustParticles.Stop();
+                leftThrustParticles.Play();
+            }
+        }
+        else
+        {
+            rightThrustParticles.Stop();
+            leftThrustParticles.Stop();
         }
 
     }

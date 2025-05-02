@@ -579,6 +579,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerRocket
       objectReference: {fileID: 0}
+    - target: {fileID: 5385835374978264962, guid: fd2834ea7bcda944baaf6dae3ac86c9a, type: 3}
+      propertyPath: crashDelay
+      value: 1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385835374978264962, guid: fd2834ea7bcda944baaf6dae3ac86c9a, type: 3}
+      propertyPath: finishDelay
+      value: 1.35
+      objectReference: {fileID: 0}
     - target: {fileID: 9037767342294714899, guid: fd2834ea7bcda944baaf6dae3ac86c9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20
