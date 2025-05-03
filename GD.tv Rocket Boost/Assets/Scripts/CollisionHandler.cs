@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,9 @@ public class CollisionHandler : MonoBehaviour
 
     [SerializeField] float crashDelay = 2f;
     [SerializeField] float finishDelay = 2f;
+
+    [SerializeField] InputAction skipLevel;
+    [SerializeField] InputAction skipCrash;
 
     [SerializeField] AudioClip crashAudio;
     [SerializeField] AudioClip finishAudio;
@@ -18,10 +22,16 @@ public class CollisionHandler : MonoBehaviour
     AudioSource audioSource;
 
     bool isControllable = true;
+    bool isCollidable = true;
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Update()
+    {
+        RespondToDebugKeys();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -29,7 +39,7 @@ public class CollisionHandler : MonoBehaviour
         //If the rocket is not controllable (crashed, level finished, etc.)
         //then don't finish this method
             //prevents unnecesary sounds
-        if (!isControllable)
+        if (!isControllable || !isCollidable)
         {
             return;
         }
@@ -92,4 +102,20 @@ public class CollisionHandler : MonoBehaviour
 
         SceneManager.LoadScene(currentScene);
     }
+
+    private void RespondToDebugKeys()
+    {
+
+        if (Keyboard.current.lKey.wasPressedThisFrame)
+        {
+            UnityEngine.Debug.Log("skip level button pressed");
+            LoadNextLevel();
+        }
+
+        if (Keyboard.current.cKey.wasPressedThisFrame)
+        {
+            isCollidable = !isCollidable;
+        }
+    }
+
 }
