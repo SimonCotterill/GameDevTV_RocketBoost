@@ -121,7 +121,7 @@ MonoBehaviour:
       m_Flags: 8
     m_Flags: 0
   thrustStrength: 1000
-  rotationStrength: 60
+  rotationStrength: 90
   leftThrustParticles: {fileID: 6145131772592447866}
   rightThrustParticles: {fileID: 8680138622700657827}
   mainThrustParticles: {fileID: 4513237279257730993}
@@ -465,6 +465,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9037767342294714899}
     m_Modifications:
+    - target: {fileID: 6284543238195014498, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Range
+      value: 12.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284543238195014498, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Intensity
+      value: 4.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284543238195014498, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_SpotAngle
+      value: 82.51834
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284543238195014498, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 74.32043
+      objectReference: {fileID: 0}
     - target: {fileID: 6377417671358724030, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
