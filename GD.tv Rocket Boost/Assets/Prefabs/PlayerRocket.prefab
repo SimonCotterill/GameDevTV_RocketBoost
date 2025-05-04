@@ -172,8 +172,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 1}
-  m_Center: {x: 0.1, y: 1, z: 0}
+  m_Size: {x: 1.29, y: 1.59, z: 1}
+  m_Center: {x: 0.1, y: 0.95, z: 0}
 --- !u!82 &783380509978347191
 AudioSource:
   m_ObjectHideFlags: 0
@@ -283,8 +283,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae429363dc6c36e468d089f2c31da9ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crashDelay: 1
-  finishDelay: 1
+  crashDelay: 1.35
+  finishDelay: 1.35
+  skipLevel:
+    m_Name: Skip Level
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 12d2268d-a769-4c2f-808b-c8593f22b5ed
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 31113f24-69b9-497c-8445-a201c8155c4e
+      m_Path: <Keyboard>/l
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Skip Level
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 29871580-9834-4dc3-b360-8e34b3e2427c
+      m_Path: <Keyboard>/#(L)
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Skip Level
+      m_Flags: 0
+    m_Flags: 0
+  skipCrash:
+    m_Name: Skip Crash
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1e69114e-4037-441f-890c-453d21e36606
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   crashAudio: {fileID: 8300000, guid: e0d99bd5fbc03db41ba5130f2f1d3e43, type: 3}
   finishAudio: {fileID: 8300000, guid: 7d054392fe3a929459b10889841f28b5, type: 3}
   successParticles: {fileID: 5792821675296260967}
