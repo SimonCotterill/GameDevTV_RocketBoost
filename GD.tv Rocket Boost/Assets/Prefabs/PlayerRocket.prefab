@@ -465,13 +465,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9037767342294714899}
     m_Modifications:
+    - target: {fileID: 3180592856140756021, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Range
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180592856140756021, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180592856140756021, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Color.g
+      value: 0.94509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180592856140756021, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180592856140756021, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: m_Intensity
+      value: 336.35
+      objectReference: {fileID: 0}
     - target: {fileID: 6284543238195014498, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
       propertyPath: m_Range
       value: 12.62
       objectReference: {fileID: 0}
     - target: {fileID: 6284543238195014498, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
       propertyPath: m_Intensity
-      value: 4.49
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6284543238195014498, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
       propertyPath: m_SpotAngle
