@@ -2,10 +2,10 @@
 Rocket Boost game from GameDevTV's "Complete Unity 3D Developer: Design &amp; Develop Games in Unity 6 using C#" course
 
 Brief Example of Level 1
-![Feature 1](images/animation1.gif)
+![Feature 1](Gifs/rocket_lvl_1.gif)
 
 Brief Example of Level 2
-![Feature 2](images/animation2.gif)
+![Feature 2](Gifs/rocket_lvl_2.gif)
 
 Brief Example of Level 3
-![Feature 3](images/animation3.gif)
+![Feature 3](Gifs/rocket_lvl_3.gif)
